@@ -1,0 +1,668 @@
+*{margin:0; padding:0;}
+ul,ol{list-style:none; color:inherit;}
+a{text-decoration: none;}
+
+body{
+  background-color: #fff;
+  font-family: "맑은 고딕",Arial;
+  color:#333;
+}
+
+i,li a{color:#333;}
+i:hover,li a:hover{color:#c90000;}
+
+#top-banner{
+  width:100%;
+  height:80px;
+  background-color: #c90000;
+}
+
+#top-banner img{
+  position: absolute;
+  top:0px; left:50%;
+  transform: translate(-50%,0%);
+}
+
+#top-banner .close{
+  position: absolute;
+  top:3px; right:0px;
+  padding:5px 5px;
+  margin:3px 10px; 
+  box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+  cursor:pointer;
+  font-size:14px;
+}
+
+
+#gnb{
+  width:100%;
+  height:24px;
+  background-color: #eee;
+  font-size:12px;
+}
+#gnb .wrap{
+  width:1200px;
+  margin:auto;
+}
+#gnb li{
+  float:left;
+  line-height:24px;
+  padding:0 8px;
+}
+.gnbLeft{
+  float:left;
+  padding-left:20px;
+}
+.gnbRightPC{
+  float:right;
+  padding-right:20px;
+}
+
+header{
+  width:1200px;
+  height:60px;
+  margin:auto;
+  padding:10px 80px;
+  box-sizing: border-box;
+  line-height:40px;
+  font-size:24px;
+  display: flex;
+  justify-content:space-around;
+}
+header .toggle{ 
+  display: none;
+}
+header .logo{
+  padding-top:3px;
+}
+header .logo img{
+  height:40px;
+  width: 200px;
+}
+header .smalllogo{
+  display: none;
+}
+header .search{
+  height:35px;
+  width:300px;
+  margin:0px 100px;
+  padding-top:3px;
+}
+form{
+  padding-top:7px;
+  width:300px;
+  height:35px;
+  position:relative;
+}
+form input{
+  width:300px;
+  height:20px;
+  font-size:12px;
+  padding:3px;
+  float:left;
+  border:none;
+  outline:none;
+  background-image:url(../img/search20.png);
+  background-repeat: no-repeat;
+  background-position:98% 40%;
+  border-bottom:1px red solid;
+}
+form > button{
+  width:20px;
+  height:20px;
+  margin:5px;
+  background-color:red;
+  border:none;
+  cursor:pointer;
+  display: none;
+}
+
+header .icons{
+  padding-top:3px;
+  float:right;
+}
+header .icons ul li{
+  width:40px;
+  height:40px;
+  text-align: center;
+  float:left;
+  padding:0 5px;
+}
+
+#pc-menu{
+  width:1200px;
+  height:50px;
+  margin:auto;
+  text-align: center;
+}
+#pc-menu .category li{  
+  display: inline;  
+  line-height:50px;
+  padding:0px 25px;
+}
+
+#mobile-menu{
+  display: none;
+}
+#mobile-menu *{
+  display: none;
+}
+#mobile-menu .bg{
+  width:400px;
+  height:100%;
+  background-color: rgba(255,255,255,0.8);
+  position:absolute;
+  top:0; left:0;
+  z-index: 1;
+  display: none;
+}
+
+#pc-banner{
+  width:1920px;
+  height:400px;
+  position:relative;
+  margin:auto;
+  overflow: hidden;
+  margin-top:3px;
+}
+.pc-banner-pics{  
+  width:300%;
+  position:absolute;
+  top:0; left:0;
+  background-color:#000;   
+}
+#pc-banner li{
+  width:1920px;
+  height:400px;
+  position:relative;
+  float:left;
+}
+#pc-banner button[type=button]{
+  background-color: transparent;
+  position:absolute;  
+  opacity: 0.7;
+  border: none;
+}
+.prev{
+  left:300px; top:180px; 
+}
+.next{ 
+  right:300px; top:180px;
+}
+.prev:hover,
+.next:hover{
+  opacity: 1;
+}
+
+#mobile-banner{
+  width:500px;
+  height:260px;
+  position:relative;
+  margin:auto;
+  overflow: hidden;
+  margin-top:2px;
+}
+.mobile-banner-pics img{
+  width:500px;
+  height:260px;
+}
+.mobile-banner-pics{ 
+  width:300%;
+  position:absolute;
+  top:0; left:0;
+  background-color:#000;   
+}
+#mobile-banner li{
+  width:500px;
+  height:260px;
+  position:relative;
+  float:left;
+}
+#mobile-banner button[type=button]{
+  background-color: transparent;
+  position:absolute;  
+  opacity: 0.7;
+  border: none;
+}
+#mobile-banner{
+  display: none;
+}
+
+.new{
+  width:100%;
+}
+.new .title{
+  width:1200px;
+  margin: auto;
+  text-align: center;
+  padding:20px 0 10px 0;
+}
+.new .title{
+  font-size:24px;
+}
+.new > .wrap{
+  max-width:1200px;
+  margin:auto;
+  padding:10px;
+}
+.new .items{
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width:100%;
+}
+.new .items li{
+  padding:5px;  
+  width:24%;
+}
+.new .items img{width:100%;}
+.new .items h1{font-size:18px;}
+.new .items h2{
+  font-size:16px;
+  padding:2px;
+}
+.new .items p{
+  font-size:12px;
+  padding:3px;
+}
+
+
+#youtube{
+  display:inline-block; /*위에 해결되면 지워*/
+  width:100%;
+  height:480px;
+  background-color: rgb(251, 230, 206);
+  margin:20px 0;
+}
+#youtube .wrap{
+  width: 1200px;  
+  height:480px;
+  margin:auto;
+}
+
+#youtube div{
+  display: flex;
+  flex-wrap: wrap;
+}
+#youtube .vid{
+  padding:100px 50px;
+}
+#youtube .txt{
+  display:block;
+  padding-top:100px;
+}
+#youtube .txt *{
+  padding:7px;
+}
+
+#collab{
+  max-width:1200px;
+  height:800px;
+  margin:auto;  
+  position:relative;
+}
+#collab .lookbook{  
+  z-index: 1;
+}
+#collab .lookbook > li{
+  position:absolute;
+  float:left;
+}
+#collab img{
+  width:1150px;
+  padding-top:50px;
+}
+#collab .txt{
+  position:absolute;
+  top:0; left:-50px;
+  z-index:2;
+  color:hotpink;
+}
+
+footer{
+  width:100%;
+  height:280px;
+  background-color: #ddd;
+}
+
+footer .wrap{
+  max-width:1200px;
+  margin:auto;  
+}
+footer .sns{
+  width:40%;
+  display: flex;
+  justify-content: space-around;
+  margin:auto;
+  padding-top:50px;
+}
+footer .sns li i{
+  font-size: 45px;
+}
+footer .appdownload{
+  width:35%;
+  display: flex;
+  justify-content: space-around;
+  margin:auto;
+}
+footer .appdownload img{
+  width:180px;
+  height:auto;
+  padding:25px;
+}
+footer p{text-align: center;}
+
+
+@media screen and (max-width:980px){
+  
+  header{    
+    width:800px;
+    height:60px;
+    padding:10px 0;
+  }
+
+  header .logo{
+    width:200px;
+    height:40px;
+    left:0;
+  } 
+  #pc-menu{
+    width:100%;
+  }  
+  header .search{
+    height:35px;
+    width:250px;
+    margin:0;
+  }  
+  form{
+    width:250px;
+  }
+  form > input{
+    width:250px;
+  }
+  header .icons ul li{
+    width:40px;
+    height:40px;
+    text-align: center;
+    float:left;
+    padding:0 0px;
+  }
+  
+  .new .items li{
+    padding:5px;  
+    width:35%;
+  }
+    
+  .new .title{
+    width:900px;
+  }
+  .new .title{
+    font-size:20px;
+  }
+    
+  #collab{
+    max-width:800px;
+    height:550px;
+  }
+  #collab img{
+    width:100%;
+    height:auto;
+    padding-top:30px;
+  }
+  #collab .txt{
+    padding:0 20px;
+  }
+
+  footer .sns{
+    width:60%;
+    display: flex;
+    justify-content: space-around;
+    margin:auto;
+  }
+  footer .sns li i{
+    font-size: 38px;
+  }
+  
+  footer .appdownload{
+    width:50%;
+    padding-top:10px;
+  }
+
+
+}
+
+@media screen and (max-width:768px){
+  ::-webkit-scrollbar{display: none;}
+  #top-banner{
+    width:100%;
+    height:60px;
+  }
+  #top-banner .wrap{ 
+    width:768px;
+    height:60px;   
+    margin:auto;
+    transform: translate(20%);
+  }
+  #top-banner img{
+    width:500px;
+    height:auto;
+    padding-top:5px;
+  }
+  
+  #gnb{
+    display: none;
+  }
+
+  header{    
+    width:500px;
+    height:60px;
+    padding:10px 0;
+  }
+
+  header .toggle{    
+    display: block;
+    padding:0 10px;
+    text-align: center;
+  }
+
+  header .logo{
+    width:100px;
+    height:40px;
+    margin-right:20px;
+  }    
+  header .logo img{
+    width:120px;
+    height:100%;
+  }
+  header .smalllogo{
+    display: block;
+  }
+  header .biglogo{
+    display: none;
+  }
+  header .search{
+    height:35px;
+    width:160px;
+    margin:0;
+  }   
+
+  form{
+    width:150px;
+  }
+  form > input{
+    width:150px;
+  }
+  header .icons ul li{
+    width:40px;
+    height:40px;
+    text-align: center;
+    float:left;
+    padding:0 0px;
+  }
+
+  #pc-menu{
+    display: none;
+  }
+  #mobile-menu ul{
+    width:500px;
+    height:100%;
+    position:relative;
+    z-index:2;
+  }
+  #mobile-menu ul li{  
+    width:200px;
+    height:40px;
+    color:#fff;
+    line-height:40px;   
+    display:block;
+  } 
+  #mobile-menu .gnbMobile{
+    display: block;
+    position:absolute;
+    top:30px; left:10px;
+  }   
+  #mobile-menu .category{
+    display: block;
+    position:absolute;
+    top:120px;    
+  }   
+  #mobile-menu .gnbMobile li{
+    width:50px;
+    height:50px;
+    padding:10px 15px;
+    float:left;
+  }   
+  #mobile-menu .category li{    
+    display:block; 
+    padding-left:20px;
+    text-align:left;
+  }
+  #mobile-menu li:hover{
+    font-weight: bold;
+  }
+  #mobile-menu li a{
+    width:100%;
+    height:100%;
+    display: block;
+  }
+  #mobile-menu .bg{
+    display:block;
+  }
+  #mobile-menu button{
+    position:absolute;
+    top:15px; left:350px;
+    z-index: 2;
+    padding:5px;
+    border: none;
+    background-color: transparent;
+    font-size:20px;
+    display: block;
+    cursor: pointer;
+  }
+  #pc-banner{
+    display: none;
+  }
+  #mobile-menu{
+    display: none;
+  }
+  #mobile-banner{
+    display: block;
+  }  
+  .prev{
+    left:40px; top:110px; 
+  }
+  .next{ 
+    right:40px; top:110px;
+  }
+
+  .new{
+    min-width:500px;
+    margin:auto;
+  }
+
+
+  
+  .new .title{
+    width:500px;
+    margin: auto;
+    text-align: center;
+    padding:20px 0 10px 0;
+  }
+
+  .new h1{font-size:18px;}
+  .new h2{font-size:16px;}
+  .new p{font-size:12px;}
+
+  .new .items li{
+    padding:5px;  
+    width:45%;
+  }
+
+  #youtube{
+    height:500px;
+  }
+
+  #youtube .wrap{
+    width:500px;
+    margin:auto;
+    position:relative;
+  }
+    
+  #youtube div{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+  }
+  #youtube iframe{
+    width:480px;
+    height:270px;
+  }
+  #youtube .vid{
+    padding:10px;
+  }
+  #youtube .txt{
+    position:absolute;
+    top:185px; left:15px;
+  }
+  #youtube .txt *{
+    padding:7px;
+  }
+    
+  #collab{
+    max-width:750px;
+    height:400px;
+  }
+  #collab img{
+    width:95%;
+    padding:10px;
+  }  
+  #collab .txt{
+    font-size: 65%;
+    top:290px; left:10px;
+  }
+
+    
+  footer{
+    height:250px;
+    margin-top:20px;
+  }
+  footer .sns{
+    width:50%;
+    padding-top:20px;
+  }
+
+  footer .sns li{
+    padding:0px 15px;
+  }
+  footer .appdownload{
+    width:50%;
+    margin-top:-10px;
+  }
+  footer p{
+    margin-bottom:20px;
+  }
+
+
+}
